@@ -10,13 +10,11 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import com.jiomoney.snapbizz.R;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class GenerateCouponActivity extends AppCompatActivity {
-
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
