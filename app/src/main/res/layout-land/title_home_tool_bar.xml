@@ -76,4 +76,5 @@
             android:layout_weight="0.05"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
 </android.support.v7.widget.Toolbar>

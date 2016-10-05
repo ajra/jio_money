@@ -14,7 +14,6 @@ public class BillingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_billing);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
     }
 
 }

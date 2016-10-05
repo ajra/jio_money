@@ -11,4 +11,5 @@
     <color name="color_merchant">#3873b6</color>
     <color name="color_white">#FFFFFF</color>
     <color name="color_bg_title">#818282</color>
+    <color name="color_black">#000000</color>
 </resources>
