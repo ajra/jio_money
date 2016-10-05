@@ -15,7 +15,16 @@
         <include layout="@layout/title_home_tool_bar" />
 
     </android.support.design.widget.AppBarLayout>
-
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_marginTop="60dp"
+        android:id="@+id/walletRecyclerView"
+        android:visibility="visible"
+        android:scrollbars="vertical"
+        />
     <include layout="@layout/content_orders" />
 
 </android.support.design.widget.CoordinatorLayout>
