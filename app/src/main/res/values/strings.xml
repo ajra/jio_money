@@ -8,4 +8,14 @@
     <string name="title_activity_suppliers_order">Suppliers Order</string>
     <string name="title_activity_generate_coupon">Generate Coupon</string>
     <string name="under_development">Under Development</string>
+
+    <string name="product_name">Product Name</string>
+    <string name="mrp">MRP</string>
+    <string name="selling_price">Selling Price</string>
+    <string name="discount_code">Discount Code</string>
+    <string name="discount_percentage">Discount %</string>
+    <string name="customer">Customer</string>
+    <string name="submit">Submit</string>
+
+
 </resources>
