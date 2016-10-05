@@ -8,30 +8,33 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+
 import com.jiomoney.snapbizz.R;
-import butterknife.Bind;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class GenerateCouponActivity extends AppCompatActivity {
 
-    @Bind(R.id.toolbar)
+
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.product_name_edit_text)
+    @BindView(R.id.product_name_edit_text)
     EditText productNameEditText;
-    @Bind(R.id.mrp_edit_text)
+    @BindView(R.id.mrp_edit_text)
     EditText mrpEditText;
-    @Bind(R.id.selling_price_edit_text)
+    @BindView(R.id.selling_price_edit_text)
     EditText sellingPriceEditText;
-    @Bind(R.id.discount_code_edit_text)
+    @BindView(R.id.discount_code_edit_text)
     EditText discountCodeEditText;
-    @Bind(R.id.discount_spinner)
+    @BindView(R.id.discount_spinner)
     Spinner discountSpinner;
-    @Bind(R.id.customer_spinner)
+    @BindView(R.id.customer_spinner)
     Spinner customerSpinner;
-    @Bind(R.id.submit_button)
+    @BindView(R.id.submit_button)
     Button submitButton;
-    @Bind(R.id.content_generate_coupon)
+    @BindView(R.id.content_generate_coupon)
     LinearLayout contentGenerateCoupon;
 
     @Override

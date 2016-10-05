@@ -15,7 +15,12 @@
     <string name="discount_code">Discount Code</string>
     <string name="discount_percentage">Discount %</string>
     <string name="customer">Customer</string>
-    <string name="submit">Submit</string>
+    <string name="no">NO</string>
+    <string name="my_order">My Order</string>
+    <string name="name">Name</string>
+    <string name="in_process">IN Process</string>
+    <string name="delivery">Delivery</string>
+    <string name="cancelled">Canceled</string>
 
 
 </resources>

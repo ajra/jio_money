@@ -12,5 +12,7 @@
     <color name="color_white">#FFFFFF</color>
     <color name="color_bg_title">#818282</color>
     <color name="black">#ff000000</color>
-
+    <color name="purple">#918FC1</color>
+    <color name="seprator">#D0D0D0</color>
+    <color name="header_bag">#EDEEF0</color>
 </resources>
