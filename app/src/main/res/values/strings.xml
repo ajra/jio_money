@@ -7,4 +7,5 @@
     <string name="title_activity_order_details">Order Details</string>
     <string name="title_activity_suppliers_order">Suppliers Order</string>
     <string name="title_activity_generate_coupon">Generate Coupon</string>
+    <string name="under_development">Under Development</string>
 </resources>

@@ -16,6 +16,8 @@ import android.view.Display;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.jiomoney.snapbizz.R;
+
 
 public class Common {
     public static <T> String getTAG(Class<T> clazz) {
