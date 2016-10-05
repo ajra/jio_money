@@ -1,0 +1,9 @@
+{
+  "matchDelayList" :[
+    {"actionName" : "Drinks","isSelected": false},
+    {"actionName" : "Lunch","isSelected": false},
+    {"actionName" : "Tea","isSelected": false},
+    {"actionName" : "Close of play","isSelected": false},
+    {"actionName" : "Others","isSelected": false}
+  ]
+}
