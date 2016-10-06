@@ -1,13 +1,12 @@
 package com.jiomoney.snapbizz.ui.inventory;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.jiomoney.snapbizz.R;
+
+import butterknife.ButterKnife;
 
 public class InventoryManagementActivity extends AppCompatActivity {
 
@@ -15,6 +14,7 @@ public class InventoryManagementActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inventory_management);
+        ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
