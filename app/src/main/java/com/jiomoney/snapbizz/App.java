@@ -24,7 +24,6 @@ public class App extends MultiDexApplication {
         helveticaMedium = Typeface.createFromAsset(this.getAssets(), "fonts/helvetica_neue_medium.ttf");
     }
 
-
     public static App getInstance() {
         return sInstance;
     }

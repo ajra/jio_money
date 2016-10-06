@@ -210,7 +210,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/submit_button"
-            android:text="@string/submit"
+            android:text="Submit"
             android:layout_gravity="center"
             android:gravity="center"/>
     </LinearLayout>

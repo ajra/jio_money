@@ -1,0 +1,144 @@
+{
+  "zeroInventoryList": [
+    {
+      "productName": "pils bury Atta",
+      "supplierProductList": [
+        {
+          "supplierName": "Reliance Cash and Carry",
+          "sellingPrice": 200,
+          "quantity": 10
+        },
+        {
+          "supplierName": "Sona Enterprices",
+          "sellingPrice": 190,
+          "quantity": 20
+        },
+        {
+          "supplierName": "Bharat Distributor",
+          "sellingPrice": 220,
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "productName": "Colgate tooth paste - 200gm",
+      "supplierProductList": [
+        {
+          "supplierName": "Reliance Cash and Carry",
+          "sellingPrice": 200,
+          "quantity": 10
+        },
+        {
+          "supplierName": "Sona Enterprices",
+          "sellingPrice": 190,
+          "quantity": 20
+        },
+        {
+          "supplierName": "Bharat Distributor",
+          "sellingPrice": 220,
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "productName": "Colgate tooth paste - 200gm",
+      "supplierProductList": [
+        {
+          "supplierName": "Reliance Cash and Carry",
+          "sellingPrice": 200,
+          "quantity": 10
+        },
+        {
+          "supplierName": "Sona Enterprices",
+          "sellingPrice": 190,
+          "quantity": 20
+        },
+        {
+          "supplierName": "Bharat Distributor",
+          "sellingPrice": 220,
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "productName": "Colgate tooth paste - 200gm",
+      "supplierProductList": [
+        {
+          "supplierName": "Reliance Cash and Carry",
+          "sellingPrice": 200,
+          "quantity": 10
+        },
+        {
+          "supplierName": "Sona Enterprices",
+          "sellingPrice": 190,
+          "quantity": 20
+        },
+        {
+          "supplierName": "Bharat Distributor",
+          "sellingPrice": 220,
+          "quantity": 20
+        }
+      ]
+    }
+  ],
+  "lowStockList": [
+    {
+      "productName": "Maggi - 40 gm",
+      "quantity": 10
+    },
+    {
+      "productName": "Tatta Salt uraddal- 1 kg",
+      "quantity": 10
+    },
+    {
+      "productName": "Kellogs Conflex- 1 Kg",
+      "quantity": 2
+    },
+    {
+      "productName": "Maggi - 40 gm",
+      "quantity": 10
+    },
+    {
+      "productName": "Tatta Salt uraddal- 1 kg",
+      "quantity": 10
+    },
+    {
+      "productName": "Kellogs Conflex- 1 Kg",
+      "quantity": 2
+    }
+  ],
+  "lowSalesList": [
+    {
+      "productName": "Ruffle Lays - 250 gm",
+      "mrpPrice": 45,
+      "sellingPrice": 34,
+      "quantityInStock": 20,
+      "disCountPercent": "5%",
+      "salesLast3Days": 12
+    },
+    {
+      "productName": "KissonSOS-50gm",
+      "mrpPrice": 35,
+      "sellingPrice": 20,
+      "quantityInStock": 20,
+      "disCountPercent": "5%",
+      "salesLast3Days": 13
+    },
+    {
+      "productName": "Ruffle Lays - 250 gm",
+      "mrpPrice": 40,
+      "sellingPrice": 34,
+      "quantityInStock": 20,
+      "disCountPercent": "5%",
+      "salesLast3Days": 14
+    },
+    {
+      "productName": "KissonSOS-50gm",
+      "mrpPrice": 47,
+      "sellingPrice": 38,
+      "quantityInStock": 20,
+      "disCountPercent": "5%",
+      "salesLast3Days": 8
+    }
+  ]
+}

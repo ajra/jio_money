@@ -22,5 +22,10 @@
     <string name="delivery">Delivery</string>
     <string name="cancelled">Canceled</string>
 
+    <!--home-->
+    <string name="text_yesterday_business">YESTERDAY\'S BUSINESS</string>
+    <string name="text_today_orders">TODAY\'S ORDERS</string>
+    <string name="text_inventory_management">INVENTORY MANAGEMENT</string>
+    <string name="text_billing">BILLING</string>
 
 </resources>

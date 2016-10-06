@@ -12,5 +12,95 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.jiomoney.snapbizz.ui.inventory.InventoryManagementActivity"
     tools:showIn="@layout/activity_inventory_management">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/home_inventory_button_selector"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_inventory_mgt"
+                android:layout_width="50dp"
+                android:layout_margin="10dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="INVENTORY MANAGEMENT"
+                android:textColor="@color/color_white"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:weightSum="1.0"
+                android:layout_weight="0.6"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="ZERO INVENTORY"
+                    android:textColor="@color/color_white"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/home_yesterday_button_selector"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:weightSum="1.0"
+                android:layout_weight="0.2"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="LOW STOCK"
+                    android:textColor="@color/color_white"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/home_yesterday_button_selector"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:weightSum="1.0"
+                android:layout_weight="0.2"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/color_white"
+                android:text="LOW SALES"
+                android:textStyle="bold"
+                android:background="@drawable/home_yesterday_button_selector"
+                android:layout_height="wrap_content" />
+                </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>

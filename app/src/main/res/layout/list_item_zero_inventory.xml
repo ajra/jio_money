@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/supplier_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/list_item_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="0.8">
+
+        <View style="@style/style_inventory_line_view" />
+
+        <TextView
+            android:id="@+id/product_name_text_view"
+            style="@style/style_zero_inventory_item_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Product" />
+
+        <View style="@style/style_inventory_line_view" />
+
+        <TextView
+            android:id="@+id/supplier_text_view"
+            style="@style/style_zero_inventory_item_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.3"
+            android:text="Supplier" />
+
+        <View style="@style/style_inventory_line_view" />
+
+        <TextView
+            android:id="@+id/selling_price_text_view"
+            style="@style/style_zero_inventory_item_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
+            android:text="Selling Price" />
+
+        <View style="@style/style_inventory_line_view" />
+
+        <EditText
+            android:id="@+id/qty_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
+            android:text="10" />
+
+        <View style="@style/style_inventory_line_view" />
+
+        <Button
+            android:id="@+id/action_button"
+            style="@style/style_zero_inventory_item_action_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
+            android:text="Action" />
+
+        <View style="@style/style_inventory_line_view" />
+
+    </LinearLayout>
+
+</LinearLayout>
