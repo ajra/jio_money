@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/supplier_row"
+    android:id="@+id/stock_supplier_row"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/inventory_header_height"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     android:background="@color/color_bg_title"
     android:orientation="vertical">
 
@@ -15,7 +17,7 @@
         <View style="@style/style_inventory_line_view" />
 
         <TextView
-            android:id="@+id/header_product_name"
+            android:id="@+id/header_stock_product_name"
             style="@style/style_zero_inventory_header_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -26,7 +28,7 @@
         <View style="@style/style_inventory_line_view" />
 
         <TextView
-            android:id="@+id/header_qty"
+            android:id="@+id/header_stock_qty"
             style="@style/style_zero_inventory_header_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

@@ -9,112 +9,156 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/list_item_bg_color"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.jiomoney.snapbizz.ui.orders.OrdersActivity"
     tools:showIn="@layout/activity_orders">
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/llMainTittle">
+            android:text="Today's Orders"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="@color/color_white"
+            android:background="@color/color_bg_title"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <LinearLayout
+                android:id="@+id/llMainTittle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="6"
-                android:background="@color/header_bag"
-                android:id="@+id/linearLayouttitle">
+                android:orientation="vertical">
                 <View
-                    android:layout_width="1dp"
-                    android:background="@color/color_bg_title"
-                    android:layout_height="37dp"/>
-                <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_bg_title"/>
+                <LinearLayout
+                    android:id="@+id/linearLayouttitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/no"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:textColor="@color/purple"
-                    android:layout_weight="0.5"/>
-                <View
-                    android:layout_width="1dp"
-                    android:background="@color/color_bg_title"
-                    android:layout_height="37dp"/>
+                    android:background="@color/list_item_bg_color"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:text="@string/my_order"
-                    android:textColor="@color/purple"
-                    android:layout_weight="1.175"/>
-                <View
-                    android:layout_width="1dp"
-                    android:background="@color/color_bg_title"
-                    android:layout_height="37dp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/name"
-                    android:layout_weight="0.8"
-                    android:textColor="@color/purple"
-                    android:gravity="center"
-                    android:layout_gravity="center"/>
-                <View
-                    android:layout_width="1dp"
-                    android:background="@color/color_bg_title"
-                    android:layout_height="37dp"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="37dp"
+                        android:background="@color/color_bg_title" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/in_process"
-                    android:layout_weight="1.175"
-                    android:textColor="@color/purple"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.05"
+                        android:gravity="center"
+                        android:text="@string/no"
+                        android:textStyle="bold"
+                        android:textColor="@color/purple" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="37dp"
+                        android:background="@color/color_bg_title" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.15"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/my_order"
+                        android:textColor="@color/purple" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="37dp"
+                        android:background="@color/color_bg_title" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/name"
+                        android:textColor="@color/purple" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="37dp"
+                        android:background="@color/color_bg_title" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/in_process"
+                        android:textColor="@color/purple" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="37dp"
+                        android:background="@color/color_bg_title" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/delivery"
+                        android:textColor="@color/purple" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="37dp"
+                        android:background="@color/color_bg_title" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/cancelled"
+                        android:textColor="@color/purple" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="37dp"
+                        android:background="@color/color_bg_title" />
+                </LinearLayout>
+
                 <View
-                    android:layout_width="1dp"
-                    android:background="@color/color_bg_title"
-                    android:layout_height="37dp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/delivery"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:textColor="@color/purple"
-                    android:layout_weight="1.175"/>
-                <View
-                    android:layout_width="1dp"
-                    android:background="@color/color_bg_title"
-                    android:layout_height="37dp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cancelled"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:textColor="@color/purple"
-                    android:layout_weight="1.175"/>
-                <View
-                    android:layout_width="1dp"
-                    android:background="@color/color_bg_title"
-                    android:layout_height="37dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_bg_title" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/today_order_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
             </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:background="@color/color_bg_title"
-                android:layout_height="1dp">
-
-            </View>
-
-        </LinearLayout>
-    </ScrollView>
 </RelativeLayout>

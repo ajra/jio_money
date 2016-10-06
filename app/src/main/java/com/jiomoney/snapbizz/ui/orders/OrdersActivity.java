@@ -1,14 +1,12 @@
 package com.jiomoney.snapbizz.ui.orders;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -18,9 +16,8 @@ import com.jiomoney.snapbizz.R;
 import com.jiomoney.snapbizz.adapter.TodayOrderAdapter;
 import com.jiomoney.snapbizz.ui.orders.model.TodayOrder;
 import com.jiomoney.snapbizz.utils.AppLog;
+import com.jiomoney.snapbizz.utils.ReadFiles;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +27,7 @@ import butterknife.ButterKnife;
 public class OrdersActivity extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.today_Order_RecyclerView)
+    @BindView(R.id.today_order_recyclerView)
     RecyclerView todayOrderRecyclerView;
     @BindView(R.id.linearLayouttitle)
     LinearLayout linearLayouttitle;
@@ -48,17 +45,20 @@ public class OrdersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orders);
         ButterKnife.bind(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         todayOrderList = new ArrayList<>();
-        todayOrderRecyclerView.setHasFixedSize(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR_MR1) {
+            todayOrderRecyclerView.setHasFixedSize(true);
+        }
         mLayoutManager = new LinearLayoutManager(this);
-        todayOrderRecyclerView.setLayoutManager(mLayoutManager);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR_MR1) {
+            todayOrderRecyclerView.setLayoutManager(mLayoutManager);
+        }
         todayOrderPojo=new TodayOrder();
         try {
             GsonBuilder gsonBUilder = new GsonBuilder();
             Gson gson = gsonBUilder.create();
-            todayOrderPojo = gson.fromJson(loadJSONFromAsset("today_orders.json"), TodayOrder.class);
+            todayOrderPojo = gson.fromJson(ReadFiles.readRawFileAsString(this, R.raw.today_orders), TodayOrder.class);
             todayOrderList.clear();
             for (int i = 0; i < todayOrderPojo.orderList.size(); i++) {
                 todayOrderList.add(todayOrderPojo.orderList.get(i));
@@ -70,22 +70,8 @@ public class OrdersActivity extends AppCompatActivity {
             AppLog.handleException(AppLog.TAG, e);
         }
         todayOrderAdapter = new TodayOrderAdapter(todayOrderList,context);
-        todayOrderRecyclerView.setAdapter(todayOrderAdapter);
-    }
-
-    public String loadJSONFromAsset(String string) {
-        String json = null;
-        try {
-            InputStream is = OrdersActivity.this.getAssets().open(string);
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            AppLog.handleException(AppLog.TAG, ex);
-            return null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR_MR1) {
+            todayOrderRecyclerView.setAdapter(todayOrderAdapter);
         }
-        return json;
     }
 }
