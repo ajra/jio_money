@@ -52,7 +52,7 @@ public class OrdersActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         todayOrderList = new ArrayList<>();
         todayOrderRecyclerView.setHasFixedSize(true);
-        mLayoutManager=new LinearLayoutManager(this);
+        mLayoutManager = new LinearLayoutManager(this);
         todayOrderRecyclerView.setLayoutManager(mLayoutManager);
         todayOrderPojo=new TodayOrder();
         try {
