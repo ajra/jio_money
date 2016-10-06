@@ -15,106 +15,106 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/llMainTittle">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="6"
-            android:background="@color/header_bag"
-            android:id="@+id/linearLayouttitle">
-            <View
-                android:layout_width="1dp"
-                android:background="@color/color_bg_title"
-                android:layout_height="37dp"/>
-            <TextView
-                android:layout_width="0dp"
+            android:orientation="vertical"
+            android:id="@+id/llMainTittle">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/no"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:textColor="@color/purple"
-                android:layout_weight="0.5"/>
-            <View
-                android:layout_width="1dp"
-                android:background="@color/color_bg_title"
-                android:layout_height="37dp"/>
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:background="@color/header_bag"
+                android:id="@+id/linearLayouttitle">
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/color_bg_title"
+                    android:layout_height="37dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/purple"
+                    android:layout_weight="0.5"/>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/color_bg_title"
+                    android:layout_height="37dp"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:text="@string/my_order"
-                android:textColor="@color/purple"
-                android:layout_weight="1.175"/>
-            <View
-                android:layout_width="1dp"
-                android:background="@color/color_bg_title"
-                android:layout_height="37dp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/name"
-                android:layout_weight="0.8"
-                android:textColor="@color/purple"
-                android:gravity="center"
-                android:layout_gravity="center"/>
-            <View
-                android:layout_width="1dp"
-                android:background="@color/color_bg_title"
-                android:layout_height="37dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/my_order"
+                    android:textColor="@color/purple"
+                    android:layout_weight="1.175"/>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/color_bg_title"
+                    android:layout_height="37dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:layout_weight="0.8"
+                    android:textColor="@color/purple"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/color_bg_title"
+                    android:layout_height="37dp"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/in_process"
-                android:layout_weight="1.175"
-                android:textColor="@color/purple"
-                android:gravity="center"
-                android:layout_gravity="center"
-                />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/in_process"
+                    android:layout_weight="1.175"
+                    android:textColor="@color/purple"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/color_bg_title"
+                    android:layout_height="37dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/purple"
+                    android:layout_weight="1.175"/>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/color_bg_title"
+                    android:layout_height="37dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancelled"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/purple"
+                    android:layout_weight="1.175"/>
+                <View
+                    android:layout_width="1dp"
+                    android:background="@color/color_bg_title"
+                    android:layout_height="37dp"/>
+            </LinearLayout>
+
             <View
-                android:layout_width="1dp"
+                android:layout_width="match_parent"
                 android:background="@color/color_bg_title"
-                android:layout_height="37dp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/delivery"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:textColor="@color/purple"
-                android:layout_weight="1.175"/>
-            <View
-                android:layout_width="1dp"
-                android:background="@color/color_bg_title"
-                android:layout_height="37dp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/cancelled"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:textColor="@color/purple"
-                android:layout_weight="1.175"/>
-            <View
-                android:layout_width="1dp"
-                android:background="@color/color_bg_title"
-                android:layout_height="37dp"/>
+                android:layout_height="1dp">
+
+            </View>
+
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:background="@color/color_bg_title"
-            android:layout_height="1dp">
-
-        </View>
-
-    </LinearLayout>
     </ScrollView>
 </RelativeLayout>
