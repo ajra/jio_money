@@ -58,11 +58,12 @@
                     <EditText
                         android:id="@+id/customer_mobile_edit_text"
                         style="@style/style_billing_layout"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
+                        android:inputType="number"
+                        android:maxLines="1"
                         android:gravity="left"
-                        android:text="9843877803"
                         android:textColor="@color/color_merchant" />
                 </LinearLayout>
 
@@ -83,7 +84,7 @@
                     <EditText
                         android:id="@+id/coupon_applicable_edit_text"
                         style="@style/style_billing_layout"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
                         android:text="9843877803"
@@ -105,7 +106,7 @@
                     <EditText
                         android:id="@+id/coupon_applicable2_edit_text"
                         style="@style/style_billing_layout"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
                         android:text="9843877803"
