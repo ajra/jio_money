@@ -1,14 +1,26 @@
 package com.jiomoney.snapbizz.ui.inventory;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.jiomoney.snapbizz.R;
+import com.jiomoney.snapbizz.adapter.TodayOrderAdapter;
+import com.jiomoney.snapbizz.ui.inventory.adapters.LowSalesAdapter;
+import com.jiomoney.snapbizz.ui.inventory.adapters.LowStockAdapter;
+import com.jiomoney.snapbizz.ui.inventory.model.InventoryManagementList;
+import com.jiomoney.snapbizz.ui.orders.model.TodayOrder;
+import com.jiomoney.snapbizz.utils.ReadFiles;
+
+import java.io.IOException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,13 +58,30 @@ public class InventoryManagementActivity extends AppCompatActivity {
     @BindView(R.id.stock_supplier_row)
     LinearLayout stockSupplierRow;
 
+    InventoryManagementList inventoryManagementList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inventory_management);
         ButterKnife.bind(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Gson gson = new Gson();
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        try {
+            inventoryManagementList = gson.fromJson(ReadFiles.readRawFileAsString(this, R.raw.inventory_managment_list), InventoryManagementList.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        LowStockAdapter lowStockAdapter = new LowStockAdapter(inventoryManagementList.getLowStockList(), this);
+        lowStockRecyclerView.setLayoutManager(mLayoutManager);
+        lowStockRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        lowStockRecyclerView.setAdapter(lowStockAdapter);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        LowSalesAdapter lowSalesAdapter = new LowSalesAdapter(inventoryManagementList.getLowSalesList(), this);
+        lowSalesRecyclerView.setLayoutManager(layoutManager);
+        lowSalesRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        lowSalesRecyclerView.setAdapter(lowSalesAdapter);
     }
 
 }

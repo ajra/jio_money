@@ -10,7 +10,9 @@
         android:id="@+id/header_action"
         style="@style/style_low_stock_header_label"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
         android:text="Product" />
 
 </LinearLayout>

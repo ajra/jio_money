@@ -42,6 +42,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="See Details and Order"
             android:layout_weight="0.1" />
 
         <View style="@style/style_inventory_line_view" />
