@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.jiomoney.snapbizz.ui.billing.BillingActivity"
+    tools:showIn="@layout/activity_billing">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/orderHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_inventory_management">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_inventory_mgt"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="Bill Checkout"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <ScrollView
+            android:id="@+id/content_billing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.77"
+
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="0.9">
+
+                            <TextView
+                                android:id="@+id/customer_mobile_text_view"
+                                style="@style/style_billing_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:text="Customer Mobile No :"
+                                android:textColor="@color/color_merchant" />
+
+                            <EditText
+                                android:id="@+id/customer_mobile_edit_text"
+                                style="@style/style_billing_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.7"
+                                android:gravity="left"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:textColor="@color/color_merchant" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="0.9">
+
+                            <TextView
+                                android:id="@+id/coupon_applicable_text_view"
+                                style="@style/style_billing_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:text="Coupon Applicable :"
+                                android:textColor="@color/color_merchant" />
+
+                            <EditText
+                                android:id="@+id/coupon_applicable_edit_text"
+                                style="@style/style_billing_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.7"
+                                android:text="9843877803"
+                                android:textColor="@color/color_merchant" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="0.9">
+
+                            <TextView
+                                style="@style/style_billing_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:textColor="@color/color_merchant" />
+
+                            <EditText
+                                android:id="@+id/coupon_applicable2_edit_text"
+                                style="@style/style_billing_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.7"
+                                android:text="9843877803"
+                                android:textColor="@color/color_merchant" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:layout_marginBottom="4dp"
+                            android:background="#bcbcbc" />
+
+                        <include layout="@layout/billing_checkout_single_row" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:layout_marginBottom="4dp"
+                            android:background="#bcbcbc" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/itemlist_recycle_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_today_order"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true">
+
+                                <TextView
+                                    android:id="@+id/savings_text_view"
+                                    style="@style/style_billing_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Savings :"
+                                    android:textColor="@color/color_white" />
+
+                                <TextView
+                                    android:id="@+id/savings_value_text_view"
+                                    style="@style/style_billing_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="86.0"
+                                    android:textColor="@color/color_white" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true">
+
+                                <TextView
+                                    android:id="@+id/amount_payable_text_view"
+                                    style="@style/style_billing_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Amount Payable :"
+                                    android:textColor="@color/color_white" />
+
+                                <TextView
+                                    android:id="@+id/amount_payable_value_text_view"
+                                    style="@style/style_billing_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="778.00"
+                                    android:textColor="@color/color_white" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_merchant"
+                            android:orientation="horizontal"
+                            android:weightSum="1.0">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.95"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/item_value_text_view"
+                                        style="@style/style_billing_layout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:text="4"
+                                        android:textColor="@color/color_white"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/total_value_text_view"
+                                        style="@style/style_billing_layout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_gravity="right"
+                                        android:text="778.00"
+                                        android:textColor="@color/color_white"
+                                        android:textSize="20dp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/item_text_view"
+                                        style="@style/style_billing_layout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:text="Items"
+                                        android:textColor="@color/color_white" />
+
+                                    <TextView
+                                        android:id="@+id/total_text_view"
+                                        style="@style/style_billing_layout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_gravity="right"
+                                        android:text="Total"
+                                        android:textColor="@color/color_white" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.05"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/payment_arrow_image_view"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/right_arrow" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/suggestions_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Suggestions :"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/fab_margin"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/suggestions_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_gravity="right"
+                            android:visibility="gone"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="250dp"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/noodles"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

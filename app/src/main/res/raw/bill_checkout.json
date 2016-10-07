@@ -1,0 +1,44 @@
+{
+  "ordersList": [
+    {
+      "orderId": 1222,
+      "productName": "Reliance Cash & carry",
+      "quantity": 2,
+      "rate": "40",
+      "couponOffers": "Xcoupon Applied",
+      "amount": 700
+    },
+    {
+      "orderId": 1223,
+      "productName": "Reliance",
+      "quantity": 3,
+      "rate": "40",
+      "couponOffers": "Xcoupon Applied",
+      "amount": 400
+    },
+    {
+      "orderId": 1224,
+      "productName": "Cash & carry",
+      "quantity": 2,
+      "rate": "40",
+      "couponOffers": "Xcoupon Applied",
+      "amount": 500
+    },
+    {
+      "orderId": 1225,
+      "productName": "Reliance Cash & carry",
+      "quantity": 5,
+      "rate": "40",
+      "couponOffers": "Xcoupon Applied",
+      "amount": 100
+    },
+    {
+      "orderId": 1229,
+      "productName": "Reliance Cash & carry",
+      "quantity": 2,
+      "rate": "40",
+      "couponOffers": "Xcoupon Applied",
+      "amount": 1000
+    }
+  ]
+}

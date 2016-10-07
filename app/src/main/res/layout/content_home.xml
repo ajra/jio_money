@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.jiomoney.snapbizz.ui.home.HomeActivity"
+    tools:showIn="@layout/activity_home">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_bg_title"
+                android:padding="10dp"
+                android:text="Details"
+                android:textColor="@color/color_white" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/yesterday_business_layour"
+                    style="@style/style_home_layout"
+                    android:background="@drawable/home_yesterday_button_selector">
+
+                    <ImageView
+                        style="@style/style_home_layout_image"
+                        android:src="@drawable/ic_graph" />
+
+                    <TextView
+                        android:id="@+id/yesterday_business_text_view"
+                        style="@style/style_home_layout_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_yesterday_business"
+                        android:textColor="@color/color_white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/today_order_layout"
+                    style="@style/style_home_layout"
+                    android:background="@color/color_today_order">
+
+                    <ImageView
+                        style="@style/style_home_layout_image"
+                        android:src="@drawable/ic_report" />
+
+                    <TextView
+                        android:id="@+id/today_order_text_view"
+                        style="@style/style_home_layout_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_today_orders" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_inventory_layout"
+                    style="@style/style_home_layout"
+                    android:background="@drawable/home_inventory_button_selector">
+
+                    <ImageView
+                        style="@style/style_home_layout_image"
+                        android:src="@drawable/ic_inventory_mgt" />
+
+                    <TextView
+                        android:id="@+id/inventory_management_text_view"
+                        style="@style/style_home_layout_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_inventory_management" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/billing_layout"
+                    style="@style/style_home_layout"
+                    android:background="@color/color_billing">
+
+                    <ImageView
+                        style="@style/style_home_layout_image"
+                        android:src="@drawable/ic_billing" />
+
+                    <TextView
+                        android:id="@+id/billing_text_view"
+                        style="@style/style_home_layout_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_billing" />
+                </LinearLayout>
+            </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+</RelativeLayout>

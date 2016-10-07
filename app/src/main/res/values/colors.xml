@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#D0D0D0</color>
+
+    <color name="color_today_order">#00B6B7</color>
+    <color name="color_inventory_management">#0070B1</color>
+    <color name="color_billing">#E39D3A</color>
+    <color name="color_time">#FF0000</color>
+    <color name="color_merchant">#3873b6</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_bg_title">#818282</color>
+    <color name="color_black">#000000</color>
+    <color name="black">#ff000000</color>
+    <color name="purple">#918FC1</color>
+    <color name="list_item_bg_color">#D0D0D0</color>
+    <color name="seprator">#D0D0D0</color>
+    <color name="header_bag">#EDEEF0</color>
+</resources>
