@@ -1,9 +1,0 @@
-{
-  "matchDelayList" :[
-    {"actionName" : "Grounds","isSelected": false},
-    {"actionName" : "Weather","isSelected": false},
-    {"actionName" : "Light","isSelected": false},
-    {"actionName" : "Injury","isSelected": false},
-    {"actionName" : "Others","isSelected": false}
-  ]
-}
