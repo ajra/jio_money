@@ -28,6 +28,24 @@
     <string name="text_inventory_management">INVENTORY MANAGEMENT</string>
     <string name="text_billing">BILLING</string>
     <string name="title_activity_business">BusinessActivity</string>
-    <string name="ur_coupon_has_created">Your coupon has been created.\nIt will be distributed to \nall customers after approval.</string>
+    <string name="ur_coupon_has_created">Your coupon has been created.\nIt will be distributed to \nall customers after approval.</string>\
+
+    <!--Order Details-->
+
+    <string name="cust_name">Customer Name        </string>
+    <string name="cust_mobile"> Customer Mobile No</string>
+    <string name="deliver_time">Deliver Time        </string>
+    <string name="cust_address">Customer Address  </string>
+
+    <string name="item_name">Item Name</string>
+
+    <string name="quantity">Quantity</string>
+    <string name="rate">Rate</string>
+    <string name="amount">Amount</string>
+    <string name="action">Action</string>
+    <string name="accept">Accept</string>
+
+    <string name="modify">Modify</string>
+
 
 </resources>
