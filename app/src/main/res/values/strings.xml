@@ -3,7 +3,7 @@
     <string name="title_activity_home">Home</string>
     <string name="title_activity_orders">Orders</string>
     <string name="title_activity_billing">Billing</string>
-    <string name="title_activity_inventory_management">Inventory Management</string>
+    <string name="title_activity_inventory">Inventory Management</string>
     <string name="title_activity_order_details">Order Details</string>
     <string name="title_activity_suppliers_order">Suppliers Order</string>
     <string name="title_activity_generate_coupon">Generate Coupon</string>
@@ -28,5 +28,6 @@
     <string name="text_inventory_management">INVENTORY MANAGEMENT</string>
     <string name="text_billing">BILLING</string>
     <string name="title_activity_business">BusinessActivity</string>
+    <string name="ur_coupon_has_created">Your coupon has been created.\nIt will be distributed to \nall customers after approval.</string>
 
 </resources>

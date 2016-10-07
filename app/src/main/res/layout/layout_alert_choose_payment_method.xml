@@ -9,22 +9,22 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:orientation="horizontal"
-        android:weightSum="0.9">
+        android:weightSum="0.7">
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="60dp"
-            android:layout_weight="0.2"
-            android:src="@drawable/ic_logo" />
+            android:layout_weight="0.1"
+            android:src="@drawable/invoice" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="0.6"
+            android:layout_weight="0.5"
             android:gravity="center"
             android:padding="10dp"
-            android:text="Scan/Enter Code"
+            android:text="Choose Payment Method"
             android:textColor="@color/color_today_order"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -40,8 +40,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
+         android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
         android:padding="10dp"
         android:weightSum="1.0">
 
@@ -64,7 +64,6 @@
             android:text="4 Product"
             android:textColor="#666666"
             android:textSize="18sp"
-
             android:textStyle="normal" />
     </LinearLayout>
 
@@ -203,7 +202,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
+            android:layout_weight="0.25"
             android:gravity="center"
             android:padding="10dp"
             android:text="Cancel"
@@ -212,15 +211,16 @@
             android:textStyle="normal" />
 
         <ImageButton
+            android:id="@+id/jio_money_button"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
+            android:layout_height="55dp"
+            android:layout_weight="0.4"
             android:background="@drawable/ic_logo" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
+            android:layout_weight="0.25"
             android:gravity="center"
             android:padding="10dp"
             android:text="Cash"

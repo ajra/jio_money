@@ -1,12 +1,16 @@
 package com.jiomoney.snapbizz.ui.billing;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -24,7 +28,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class BillingActivity extends AppCompatActivity {
+public class BillingActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -74,6 +78,8 @@ public class BillingActivity extends AppCompatActivity {
     RecyclerView suggestionsRecyclerView;
     @BindView(R.id.content_billing)
     ScrollView contentBilling;
+    @BindView(R.id.payment_arrow_image_view)
+    ImageView paymentArrowImageView;
     List<BillingCheckOutPojo.OrdersListBean> billList = new ArrayList<>();
     BillingCheckOutPojo billingCheckOutPojo = new BillingCheckOutPojo();
     BillingCheckoutAdapter billingCheckoutAdapter;
@@ -87,6 +93,7 @@ public class BillingActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        paymentArrowImageView.setOnClickListener(this);
         context = this;
         mLayoutManager = new LinearLayoutManager(this);
         itemlistRecycleView.setHasFixedSize(true);
@@ -106,6 +113,15 @@ public class BillingActivity extends AppCompatActivity {
         }
         billingCheckoutAdapter = new BillingCheckoutAdapter(billList, context);
         itemlistRecycleView.setAdapter(billingCheckoutAdapter);
+    }
+
+    @Override
+    public void onClick(View v) {
+        final Dialog storeDialog = new Dialog(BillingActivity.this);
+            storeDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            storeDialog.setContentView(R.layout.layout_alert_choose_payment_method);
+            storeDialog.show();
+
     }
 }
 
