@@ -1,6 +1,7 @@
 package com.jiomoney.snapbizz.ui.inventory.adapters;
 
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,12 +12,23 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jiomoney.snapbizz.R;
+import com.jiomoney.snapbizz.ui.inventory.model.InventoryManagementList;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ZeroInventoryAdapter extends RecyclerView.Adapter<ZeroInventoryAdapter.ZeroInventoryViewHolder> {
+
+    List<InventoryManagementList.ZeroInventoryListBean> zeroInventoryListBeanList;
+    Context context;
+
+    public ZeroInventoryAdapter(List<InventoryManagementList.ZeroInventoryListBean> lowStockListBeanList, Context context) {
+        this.zeroInventoryListBeanList = lowStockListBeanList;
+        this.context = context;
+    }
 
     @Override
     public ZeroInventoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -26,12 +38,22 @@ public class ZeroInventoryAdapter extends RecyclerView.Adapter<ZeroInventoryAdap
 
     @Override
     public void onBindViewHolder(ZeroInventoryViewHolder holder, int position) {
+        InventoryManagementList.ZeroInventoryListBean zeroInventoryListBean = zeroInventoryListBeanList.get(position);
+        holder.productNameTextView.setText(String.valueOf(zeroInventoryListBean.getProductName()));
+        holder.supplierTextView.setText(zeroInventoryListBean.getSupplierProductList().get(0).getSupplierName());
+        holder.sellingPriceTextView.setText(String.valueOf(zeroInventoryListBean.getSupplierProductList().get(0).getSellingPrice()));
+        holder.qtyEditText.setText(String.valueOf(zeroInventoryListBean.getSupplierProductList().get(0).getQuantity()));
+        holder.actionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return zeroInventoryListBeanList.size();
     }
 
     @OnClick(R.id.action_button)

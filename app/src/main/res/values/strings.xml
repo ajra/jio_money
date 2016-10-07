@@ -27,5 +27,6 @@
     <string name="text_today_orders">TODAY\'S ORDERS</string>
     <string name="text_inventory_management">INVENTORY MANAGEMENT</string>
     <string name="text_billing">BILLING</string>
+    <string name="title_activity_business">BusinessActivity</string>
 
 </resources>

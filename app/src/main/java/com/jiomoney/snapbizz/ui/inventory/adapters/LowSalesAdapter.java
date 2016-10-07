@@ -41,17 +41,18 @@ public class LowSalesAdapter extends RecyclerView.Adapter<LowSalesAdapter.LowSal
         holder.lowSalesProductTextView.setText(lowSalesListBean.getProductName());
         holder.lowSalesDaysTextView.setText(String.valueOf(lowSalesListBean.getSalesLast3Days()));
         holder.lowSalesStockTextView.setText(String.valueOf(lowSalesListBean.getQuantityInStock()));
+        holder.generateCouponButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, GenerateCouponActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return lowSalesListBeanList.size();
-    }
-
-    @OnClick(R.id.generate_coupon_button)
-    public void onClick() {
-        Intent intent = new Intent(context, GenerateCouponActivity.class);
-        context.startActivity(intent);
     }
 
     public static class LowSalesViewHolder extends RecyclerView.ViewHolder {

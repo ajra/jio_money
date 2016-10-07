@@ -29,4 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Generate Coupon" />
+    <View
+        style="@style/style_inventory_bottom_line_view"/>
 </LinearLayout>

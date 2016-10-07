@@ -14,5 +14,7 @@
         android:gravity="center"
         android:layout_gravity="center"
         android:text="Product" />
+    <View
+        style="@style/style_inventory_bottom_line_view"/>
 
 </LinearLayout>

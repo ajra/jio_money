@@ -24,59 +24,74 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="style_zero_inventory_header_label">
         <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:padding">5dp</item>
-        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_height">60dp</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="style_low_stock_header_label">
         <item name="android:textColor">@color/color_black</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:layout_height">80dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_height">60dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="style_low_stock_item_label">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:padding">5dp</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
     </style>
+
     <style name="style_low_sales_item_label">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:padding">10dp</item>
     </style>
+
     <style name="style_low_stock_item_selling_label">
-        <item name="android:textSize">18sp</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">5dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/color_inventory_management</item>
         <item name="android:layout_gravity">center</item>
     </style>
+
     <style name="style_zero_inventory_item_label">
-        <item name="android:textSize">18sp</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">5dp</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
     </style>
+
     <style name="style_zero_inventory_item_action_button">
         <item name="android:layout_margin">8dp</item>
         <item name="android:background">@color/color_inventory_management</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">5dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/color_white</item>
         <item name="android:layout_gravity">center</item>
     </style>
+
     <style name="style_inventory_line_view">
-        <item name="android:background">#000</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/color_white</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">1dp</item>
     </style>
+
+    <style name="style_inventory_bottom_line_view">
+        <item name="android:background">@color/color_white</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
     <style name="style_home_layout_image">
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">50dp</item>
@@ -84,6 +99,7 @@
         <item name="android:layout_margin">5dp</item>
         <item name="android:padding">10dp</item>
     </style>
+
     <style name="style_home_layout">
         <item name="android:layout_width">300dp</item>
         <item name="android:layout_height">90dp</item>
@@ -91,8 +107,13 @@
         <item name="android:layout_margin">10dp</item>
         <item name="android:padding">10dp</item>
     </style>
+
     <style name="style_billing_layout">
         <item name="android:layout_gravity">center</item>
         <item name="android:padding">10dp</item>
     </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -16,6 +16,7 @@ import com.jiomoney.snapbizz.R;
 import com.jiomoney.snapbizz.adapter.TodayOrderAdapter;
 import com.jiomoney.snapbizz.ui.inventory.adapters.LowSalesAdapter;
 import com.jiomoney.snapbizz.ui.inventory.adapters.LowStockAdapter;
+import com.jiomoney.snapbizz.ui.inventory.adapters.ZeroInventoryAdapter;
 import com.jiomoney.snapbizz.ui.inventory.model.InventoryManagementList;
 import com.jiomoney.snapbizz.ui.orders.model.TodayOrder;
 import com.jiomoney.snapbizz.utils.ReadFiles;
@@ -82,6 +83,13 @@ public class InventoryManagementActivity extends AppCompatActivity {
         lowSalesRecyclerView.setLayoutManager(layoutManager);
         lowSalesRecyclerView.setItemAnimator(new DefaultItemAnimator());
         lowSalesRecyclerView.setAdapter(lowSalesAdapter);
+        LinearLayoutManager zeroLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+
+        ZeroInventoryAdapter zeroInventoryAdapter = new ZeroInventoryAdapter(inventoryManagementList.getZeroInventoryList(),this);
+        zeroInventoryRecyclerView.setLayoutManager(zeroLayoutManager);
+        zeroInventoryRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        zeroInventoryRecyclerView.setAdapter(lowSalesAdapter);
+        zeroInventoryRecyclerView.setAdapter(zeroInventoryAdapter);
     }
 
 }

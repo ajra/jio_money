@@ -47,5 +47,7 @@
 
         <View style="@style/style_inventory_line_view" />
     </LinearLayout>
+    <View
+        style="@style/style_inventory_bottom_line_view"/>
 
 </LinearLayout>
